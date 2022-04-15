@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/perfcompare/static/js/main.7562eb15.js",
+    "index.html": "/perfcompare/index.html",
+    "main.7562eb15.js.map": "/perfcompare/static/js/main.7562eb15.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7562eb15.js"
+  ]
+}
