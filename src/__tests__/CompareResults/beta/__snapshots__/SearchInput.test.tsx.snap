@@ -760,9 +760,10 @@ exports[`Search by title/test name Should match snapshot 1`] = `
                                 </div>
                                 <div>
                                   <canvas
-                                    height="150"
+                                    height="0"
                                     role="img"
-                                    width="300"
+                                    style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+                                    width="0"
                                   />
                                 </div>
                                 <div>
@@ -896,9 +897,10 @@ exports[`Search by title/test name Should match snapshot 1`] = `
                                 </div>
                                 <div>
                                   <canvas
-                                    height="150"
+                                    height="0"
                                     role="img"
-                                    width="300"
+                                    style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+                                    width="0"
                                   />
                                 </div>
                                 <div>
@@ -1305,9 +1307,10 @@ exports[`Search by title/test name Should match snapshot 1`] = `
                                 </div>
                                 <div>
                                   <canvas
-                                    height="150"
+                                    height="0"
                                     role="img"
-                                    width="300"
+                                    style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+                                    width="0"
                                   />
                                 </div>
                                 <div>
@@ -1441,9 +1444,10 @@ exports[`Search by title/test name Should match snapshot 1`] = `
                                 </div>
                                 <div>
                                   <canvas
-                                    height="150"
+                                    height="0"
                                     role="img"
-                                    width="300"
+                                    style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+                                    width="0"
                                   />
                                 </div>
                                 <div>
@@ -1850,9 +1854,10 @@ exports[`Search by title/test name Should match snapshot 1`] = `
                                 </div>
                                 <div>
                                   <canvas
-                                    height="150"
+                                    height="0"
                                     role="img"
-                                    width="300"
+                                    style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+                                    width="0"
                                   />
                                 </div>
                                 <div>
@@ -1986,9 +1991,10 @@ exports[`Search by title/test name Should match snapshot 1`] = `
                                 </div>
                                 <div>
                                   <canvas
-                                    height="150"
+                                    height="0"
                                     role="img"
-                                    width="300"
+                                    style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+                                    width="0"
                                   />
                                 </div>
                                 <div>

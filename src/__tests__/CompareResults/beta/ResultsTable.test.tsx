@@ -7,11 +7,8 @@ import { renderHook, screen, waitFor } from '../../utils/test-utils';
 
 describe('Results Table', () => {
   const protocolTheme = renderHook(() => useProtocolTheme()).result.current
-  .protocolTheme;
+    .protocolTheme;
   const themeMode = protocolTheme.palette.mode;
-  jest.mock('react-chartjs-2', () => ({
-    Bubble: () => null,
-  }));
 
   it('Should match snapshot', () => {
     renderWithRouter(<ResultsTable themeMode={themeMode} />);
@@ -27,7 +24,9 @@ describe('Results Table', () => {
 
     const expandButtons = screen.getAllByTestId('expand-revision-button');
     await user.click(expandButtons[0]);
-    const expandedContent = await waitFor(() => screen.getAllByTestId('expanded-row-content'));
+    const expandedContent = await waitFor(() =>
+      screen.getAllByTestId('expanded-row-content'),
+    );
     expect(expandedContent[0]).toBeVisible();
   });
 });
