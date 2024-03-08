@@ -291,6 +291,7 @@ function CompareWithBase({
             onEdit={handleEditBase}
             onSearchResultsToggle={handleSearchResultsToggleBase}
             onRemoveRevision={handleRemoveRevisionBase}
+            formIsDisplayed={baseInProgress}
           />
           <SearchComponent
             {...stringsNew}
@@ -304,6 +305,7 @@ function CompareWithBase({
             onEdit={handleEditNew}
             onSearchResultsToggle={handleSearchResultsToggleNew}
             onRemoveRevision={handleRemoveRevisionNew}
+            formIsDisplayed={newInProgress}
           />
           <Grid
             item

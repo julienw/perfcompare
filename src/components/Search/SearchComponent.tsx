@@ -45,6 +45,7 @@ interface SearchProps {
   selectLabel: string;
   tooltip: string;
   inputPlaceholder: string;
+  formIsDisplayed: boolean;
 }
 
 function SearchComponent({
@@ -61,6 +62,7 @@ function SearchComponent({
   tooltip,
   inputPlaceholder,
   isWarning,
+  formIsDisplayed,
 }: SearchProps) {
   const mode = useAppSelector((state) => state.theme.mode);
   const styles = SearchStyles(mode);
@@ -89,7 +91,6 @@ function SearchComponent({
   });
 
   const [displayDropdown, setDisplayDropdown] = useState(false);
-  const [formIsDisplayed, setFormIsDisplayed] = useState(!hasNonEditableState);
 
   const handleDocumentMousedown = useCallback(
     (e: MouseEvent) => {
@@ -146,13 +147,7 @@ function SearchComponent({
         </InputLabel>
         {/**** Edit Button ****/}
         {hasNonEditableState && !formIsDisplayed && (
-          <EditButton
-            isBase={isBaseComp}
-            onEditAction={() => {
-              onEdit();
-              setFormIsDisplayed(true);
-            }}
-          />
+          <EditButton isBase={isBaseComp} onEditAction={onEdit} />
         )}
       </Grid>
       {/**** Search - DropDown Section ****/}
@@ -207,14 +202,8 @@ function SearchComponent({
         {hasNonEditableState && formIsDisplayed && (
           <SaveCancelButtons
             searchType={searchType}
-            onSave={() => {
-              onSave();
-              setFormIsDisplayed(false);
-            }}
-            onCancel={() => {
-              onCancel();
-              setFormIsDisplayed(false);
-            }}
+            onSave={onSave}
+            onCancel={onCancel}
           />
         )}
       </Grid>
