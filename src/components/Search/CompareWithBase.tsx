@@ -78,10 +78,10 @@ function CompareWithBase({
   //the edit button will initialize the "in progress" state
   //and copy "stage" to "in progress" state
   const [baseInProgressRevs, setInProgressBaseRevs] = useState<Changeset[]>([]);
-  const [baseInProgress, setInProgressBase] = useState(false);
+  const [baseInProgress, setInProgressBase] = useState(!hasNonEditableState);
 
   const [newInProgressRevs, setInProgressNewRevs] = useState<Changeset[]>([]);
-  const [newInProgress, setInProgressNew] = useState(false);
+  const [newInProgress, setInProgressNew] = useState(!hasNonEditableState);
 
   const [displayedRevisionsBaseRevs, setDisplayedRevisionsBaseRevs] =
     useState<Changeset[]>(baseRevs);
