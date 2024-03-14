@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { Typography } from '@mui/material';
 import Divider from '@mui/material/Divider';
@@ -76,17 +76,13 @@ function CompareWithBase({
 
   //the edit button will initialize the "in progress" state
   //and copy "stage" to "in progress" state
-  const [baseInProgressRevs, setInProgressBaseRevs] = useState<Changeset[]>([]);
+  const [baseInProgressRevs, setInProgressBaseRevs] =
+    useState<Changeset[]>(baseRevs);
   const [baseInProgress, setInProgressBase] = useState(!hasNonEditableState);
 
-  const [newInProgressRevs, setInProgressNewRevs] = useState<Changeset[]>([]);
-  const [newInProgress, setInProgressNew] = useState(!hasNonEditableState);
-
-  const [displayedRevisionsBaseRevs, setDisplayedRevisionsBaseRevs] =
-    useState<Changeset[]>(baseRevs);
-
-  const [displayedRevisionsNewRevs, setDisplayedRevisionsNewRevs] =
+  const [newInProgressRevs, setInProgressNewRevs] =
     useState<Changeset[]>(newRevs);
+  const [newInProgress, setInProgressNew] = useState(!hasNonEditableState);
 
   const mode = useAppSelector((state) => state.theme.mode);
 
@@ -126,60 +122,31 @@ function CompareWithBase({
     }),
   };
 
-  useEffect(() => {
-    setStagingBaseRevs(baseRevs);
-    setStagingNewRevs(newRevs);
-  }, [baseRevs, newRevs]);
-
-  useEffect(() => {
-    if (newInProgress) {
-      setDisplayedRevisionsNewRevs(newInProgressRevs);
-    } else {
-      setDisplayedRevisionsNewRevs(newStagingRevs);
-    }
-
-    if (baseInProgress) {
-      setDisplayedRevisionsBaseRevs(baseInProgressRevs);
-    } else {
-      setDisplayedRevisionsBaseRevs(baseStagingRevs);
-    }
-  }, [
-    newInProgress,
-    newInProgressRevs,
-    newStagingRevs,
-    baseInProgress,
-    baseInProgressRevs,
-    baseStagingRevs,
-  ]);
-
   const toggleIsExpanded = () => {
     setExpanded(!expanded);
   };
   const handleCancelBase = () => {
-    setInProgressBaseRevs([]);
+    setInProgressBaseRevs(baseStagingRevs);
     setInProgressBase(false);
   };
-
   const handleCancelNew = () => {
-    setInProgressNewRevs([]);
+    setInProgressNewRevs(newStagingRevs);
     setInProgressNew(false);
   };
 
   const handleSaveBase = () => {
     setStagingBaseRevs(baseInProgressRevs);
-    handleCancelBase();
+    setInProgressBase(false);
   };
-
   const handleSaveNew = () => {
     setStagingNewRevs(newInProgressRevs);
-    handleCancelNew();
+    setInProgressNew(false);
   };
 
   const handleEditBase = () => {
     setInProgressBaseRevs(baseStagingRevs);
     setInProgressBase(true);
   };
-
   const handleEditNew = () => {
     setInProgressNewRevs(newStagingRevs);
     setInProgressNew(true);
@@ -280,7 +247,7 @@ function CompareWithBase({
             isWarning={isWarning}
             hasNonEditableState={hasNonEditableState}
             searchResults={searchResultsBase}
-            displayedRevisions={displayedRevisionsBaseRevs}
+            displayedRevisions={baseInProgressRevs}
             onSave={handleSaveBase}
             onCancel={handleCancelBase}
             onEdit={handleEditBase}
@@ -294,7 +261,7 @@ function CompareWithBase({
             hasNonEditableState={hasNonEditableState}
             isWarning={isWarning}
             searchResults={searchResultsNew}
-            displayedRevisions={displayedRevisionsNewRevs}
+            displayedRevisions={newInProgressRevs}
             onSave={handleSaveNew}
             onCancel={handleCancelNew}
             onEdit={handleEditNew}
