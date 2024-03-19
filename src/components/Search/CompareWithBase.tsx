@@ -197,12 +197,10 @@ function CompareWithBase({
 
   const handleSearchResultsToggleBase = (toggleArray: Changeset[]) => {
     setInProgressBaseRevs(toggleArray || []);
-    setInProgressBase(true);
   };
 
   const handleSearchResultsToggleNew = (toggleArray: Changeset[]) => {
     setInProgressNewRevs(toggleArray || []);
-    setInProgressNew(true);
   };
 
   return (
