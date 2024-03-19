@@ -194,7 +194,6 @@ function CompareWithBase({
       baseInProgressRevs,
     );
     setInProgressBaseRevs(newBaseRevs);
-    setInProgressBase(true);
   };
   const handleSearchResultsToggleNew = (item: Changeset) => {
     const newNewRevs = handleItemToggleInChangesetList(
@@ -203,7 +202,6 @@ function CompareWithBase({
       newInProgressRevs,
     );
     setInProgressNewRevs(newNewRevs);
-    setInProgressNew(true);
   };
 
   return (
