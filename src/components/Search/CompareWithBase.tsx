@@ -71,7 +71,6 @@ function CompareWithBase({
 
   //the "committed" base and new revisions initialize the staging state
   const [baseStagingRevs, setStagingBaseRevs] = useState<Changeset[]>(baseRevs);
-
   const [newStagingRevs, setStagingNewRevs] = useState<Changeset[]>(newRevs);
 
   //the edit button will initialize the "in progress" state
@@ -125,6 +124,7 @@ function CompareWithBase({
   const toggleIsExpanded = () => {
     setExpanded(!expanded);
   };
+
   const handleCancelBase = () => {
     setInProgressBaseRevs(baseStagingRevs);
     setInProgressBase(false);
@@ -157,7 +157,6 @@ function CompareWithBase({
     revisionsBase.splice(baseInProgressRevs.indexOf(item), 1);
     setInProgressBaseRevs(revisionsBase);
   };
-
   const handleRemoveRevisionNew = (item: Changeset) => {
     const revisionsNew = [...newInProgressRevs];
     revisionsNew.splice(newInProgressRevs.indexOf(item), 1);
@@ -197,7 +196,6 @@ function CompareWithBase({
     setInProgressBaseRevs(newBaseRevs);
     setInProgressBase(true);
   };
-
   const handleSearchResultsToggleNew = (item: Changeset) => {
     const newNewRevs = handleItemToggleInChangesetList(
       item,
