@@ -36,11 +36,28 @@ const generateNonce = () => {
   return window.crypto.randomUUID();
 };
 
-const getAuthCode = (tcParams: {
+function waitForStorageEvent(): Promise<void> {
+  return new Promise((resolve) => {
+    window.addEventListener(
+      'storage',
+      function storageListener(event: StorageEvent) {
+        // TODO change userCredentials with userTokens
+        // when the userCredentials fetch is moved here
+        if (event.key === 'userCredentials') {
+          resolve();
+          window.removeEventListener('storage', storageListener);
+        }
+      },
+    );
+  });
+}
+
+type TaskclusterParams = {
   url: string;
   redirectUri: string;
   clientId: string;
-}) => {
+};
+const openTaskclusterAuthenticationPage = (tcParams: TaskclusterParams) => {
   const nonce = generateNonce();
   // The nonce is stored in sessionStorage so that it can be compared with the one received by the callback endpoint.
   sessionStorage.setItem('requestState', nonce);
@@ -59,8 +76,9 @@ const getAuthCode = (tcParams: {
   window.open(url, '_blank');
 };
 
-export const checkTaskclusterCredentials = () => {
-  const taskclusterParams = getTaskclusterParams();
+export const getTaskclusterCredentials = (
+  taskclusterParams: TaskclusterParams,
+) => {
   const locationOrigin = getLocationOrigin();
 
   if (!taskclusterParams.clientId) {
@@ -71,15 +89,30 @@ export const checkTaskclusterCredentials = () => {
     localStorage.getItem('userCredentials') as string,
   ) as UserCredentialsDictionary; //UserCredentialsDictionary
 
-  if (
-    !userCredentials ||
-    !userCredentials[taskclusterParams.url]
-    // TODO: once the userCredentials are set in sessionStorage check if the "expires" date is in the past
-  ) {
-    getAuthCode(taskclusterParams);
+  if (!userCredentials) {
+    return false;
   }
-  // TODO: handle case where the user navigates directly to the login route
+
+  const credentials = userCredentials[taskclusterParams.url];
+  // TODO Check expiration, return false if it is expired.
+  return credentials;
 };
+
+export async function getTaskclusterAccessToken() {
+  const taskclusterParams = getTaskclusterParams();
+  let accessToken = getTaskclusterCredentials(taskclusterParams);
+  if (!accessToken) {
+    openTaskclusterAuthenticationPage(taskclusterParams);
+    await waitForStorageEvent();
+    accessToken = getTaskclusterCredentials(taskclusterParams);
+
+    if (!accessToken) {
+      throw new Error("Couldn't retrieve an access token for taskcluster");
+    }
+  }
+
+  return accessToken;
+}
 
 async function checkTaskclusterResponse(response: Response) {
   if (!response.ok) {
