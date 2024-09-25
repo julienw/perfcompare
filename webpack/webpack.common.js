@@ -8,6 +8,9 @@ module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
+    alias: {
+      '@': path.join(__dirname, '../src'),
+    },
     // these polyfills are for taskcluster-client-web
     fallback: {
       assert: require.resolve('assert'),
