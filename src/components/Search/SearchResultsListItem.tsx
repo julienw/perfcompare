@@ -12,9 +12,9 @@ import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
 import { style } from 'typestyle';
 
-import { Spacing } from '../../styles';
-import type { Changeset } from '../../types/state';
-import { truncateHash, getLatestCommitMessage } from '../../utils/helpers';
+import { Spacing } from '@/styles';
+import type { Changeset } from '@/types/state';
+import { truncateHash, getLatestCommitMessage } from '@/utils/helpers';
 
 interface SearchResultsListItemProps {
   index: number;

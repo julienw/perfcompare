@@ -1,8 +1,8 @@
 import { Container } from '@mui/system';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
-import { Colors, Spacing } from '../../styles';
+import { useAppSelector } from '@/hooks/app';
+import { Colors, Spacing } from '@/styles';
 import ResultsTable from './ResultsTable';
 
 function ResultsMain() {

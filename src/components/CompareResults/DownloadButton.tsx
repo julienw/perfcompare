@@ -1,11 +1,11 @@
 import { Button } from '@mui/material';
 import { style } from 'typestyle';
 
-import { RootState } from '../../common/store';
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import type { CompareResultsItem } from '../../types/state';
-import { truncateHash } from '../../utils/helpers';
+import { RootState } from '@/common/store';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import type { CompareResultsItem } from '@/types/state';
+import { truncateHash } from '@/utils/helpers';
 
 type ResultsGroupedByKey = Record<string, CompareResultsItem[]>;
 

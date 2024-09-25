@@ -3,12 +3,12 @@ import type { ReactElement } from 'react';
 import userEvent from '@testing-library/user-event';
 import { Bubble, ChartProps, Line } from 'react-chartjs-2';
 
-import { loader } from '../../components/CompareResults/loader';
-import ResultsView from '../../components/CompareResults/ResultsView';
-import RevisionHeader from '../../components/CompareResults/RevisionHeader';
-import { Strings } from '../../resources/Strings';
-import { RevisionsHeader } from '../../types/state';
-import { getLocationOrigin } from '../../utils/location';
+import { loader } from '@/components/CompareResults/loader';
+import ResultsView from '@/components/CompareResults/ResultsView';
+import RevisionHeader from '@/components/CompareResults/RevisionHeader';
+import { Strings } from '@/resources/Strings';
+import { RevisionsHeader } from '@/types/state';
+import { getLocationOrigin } from '@/utils/location';
 import getTestData from '../utils/fixtures';
 import {
   renderWithRouter,
@@ -34,7 +34,7 @@ function renderWithRoute(component: ReactElement) {
   });
 }
 
-jest.mock('../../utils/location');
+jest.mock('@/utils/location');
 const mockedGetLocationOrigin = getLocationOrigin as jest.Mock;
 
 describe('Results View', () => {

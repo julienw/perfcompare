@@ -1,8 +1,8 @@
 import Button from '@mui/material/Button';
 
-import { Strings } from '../../resources/Strings';
-import pencilDark from '../../theme/img/pencil-dark.svg';
-import pencil from '../../theme/img/pencil.svg';
+import { Strings } from '@/resources/Strings';
+import pencilDark from '@/theme/img/pencil-dark.svg';
+import pencil from '@/theme/img/pencil.svg';
 
 interface EditButtonProps {
   onEditAction: () => void;

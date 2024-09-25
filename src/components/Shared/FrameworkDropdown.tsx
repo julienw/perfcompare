@@ -1,10 +1,10 @@
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-import { frameworkMap } from '../../common/constants';
-import { DropDownItems } from '../../styles/DropDownMenu';
-import { ThemeMode } from '../../types/state';
-import type { Framework } from '../../types/types';
+import { frameworkMap } from '@/common/constants';
+import { DropDownItems } from '@/styles/DropDownMenu';
+import { ThemeMode } from '@/types/state';
+import type { Framework } from '@/types/types';
 
 interface FrameworkDropdownProps {
   frameworkId: Framework['id'];

@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 
-import { useAppSelector } from '../../hooks/app';
-import { SelectRevsStyles } from '../../styles';
-import { Changeset } from '../../types/state';
+import { useAppSelector } from '@/hooks/app';
+import { SelectRevsStyles } from '@/styles';
+import { Changeset } from '@/types/state';
 import SelectedRevisionItem from './SelectedRevisionItem';
 
 interface SelectedRevisionsProps {

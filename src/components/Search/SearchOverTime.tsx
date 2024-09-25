@@ -5,17 +5,17 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { style } from 'typestyle';
 
-import { compareOverTimeView, timeRanges } from '../../common/constants';
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
+import { compareOverTimeView, timeRanges } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
 import {
   Spacing,
   //SearchStyles can be found in CompareCards.ts
   SearchStyles,
   Colors,
-} from '../../styles';
-import { Changeset, Repository } from '../../types/state';
-import { TimeRange } from '../../types/types';
+} from '@/styles';
+import { Changeset, Repository } from '@/types/state';
+import { TimeRange } from '@/types/types';
 import SearchDropdown from './SearchDropdown';
 import SearchInputAndResults from './SearchInputAndResults';
 import SelectedRevisions from './SelectedRevisions';

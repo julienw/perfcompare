@@ -4,8 +4,8 @@ import * as kde from 'fast-kde';
 import { Line } from 'react-chartjs-2';
 import { style } from 'typestyle';
 
-import { Spacing } from '../../styles';
-import { MeasurementUnit } from '../../types/types';
+import { Spacing } from '@/styles';
+import { MeasurementUnit } from '@/types/types';
 
 ChartJS.register(LinearScale, LineElement);
 

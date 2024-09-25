@@ -3,10 +3,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { style } from 'typestyle';
 
-import { repoMap } from '../../common/constants';
-import { useAppSelector } from '../../hooks/app';
-import { ButtonsLightRaw, ButtonsDarkRaw, DropDownItems } from '../../styles';
-import { InputType, Repository } from '../../types/state';
+import { repoMap } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { ButtonsLightRaw, ButtonsDarkRaw, DropDownItems } from '@/styles';
+import { InputType, Repository } from '@/types/state';
 
 interface SearchDropdownProps {
   compact: boolean;

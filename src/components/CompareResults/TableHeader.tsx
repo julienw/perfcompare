@@ -10,9 +10,9 @@ import {
 } from 'material-ui-popup-state/hooks';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
-import { Colors, Spacing } from '../../styles';
-import type { CompareResultsTableConfig } from '../../types/types';
+import { useAppSelector } from '@/hooks/app';
+import { Colors, Spacing } from '@/styles';
+import type { CompareResultsTableConfig } from '@/types/types';
 
 type FilterableColumnProps = {
   name: string;

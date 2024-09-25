@@ -1,8 +1,8 @@
 import { style } from 'typestyle';
 
-import type { compareView, compareOverTimeView } from '../../common/constants';
-import { Spacing } from '../../styles';
-import type { CompareResultsItem, RevisionsHeader } from '../../types/state';
+import type { compareView, compareOverTimeView } from '@/common/constants';
+import { Spacing } from '@/styles';
+import type { CompareResultsItem, RevisionsHeader } from '@/types/state';
 import RevisionHeader from './RevisionHeader';
 import RevisionRow from './RevisionRow';
 

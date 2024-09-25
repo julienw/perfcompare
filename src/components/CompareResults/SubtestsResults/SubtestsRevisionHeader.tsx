@@ -4,21 +4,21 @@ import AppleIcon from '@mui/icons-material/Apple';
 import { Link } from '@mui/material';
 import { style } from 'typestyle';
 
-import { Strings } from '../../../resources/Strings';
-import { Colors, Spacing } from '../../../styles';
+import { Strings } from '@/resources/Strings';
+import { Colors, Spacing } from '@/styles';
 import type {
   SubtestsRevisionsHeader,
   PlatformShortName,
-} from '../../../types/state';
+} from '@/types/state';
 import {
   getTreeherderURL,
   truncateHash,
   getDocsURL,
-} from '../../../utils/helpers';
-import { getPlatformShortName } from '../../../utils/platform';
-import AndroidIcon from '../../Shared/Icons/AndroidIcon';
-import LinuxIcon from '../../Shared/Icons/LinuxIcon';
-import WindowsIcon from '../../Shared/Icons/WindowsIcon';
+} from '@/utils/helpers';
+import { getPlatformShortName } from '@/utils/platform';
+import AndroidIcon from '@/components/Shared/Icons/AndroidIcon';
+import LinuxIcon from '@/components/Shared/Icons/LinuxIcon';
+import WindowsIcon from '@/components/Shared/Icons/WindowsIcon';
 
 const styles = {
   revisionHeader: style({

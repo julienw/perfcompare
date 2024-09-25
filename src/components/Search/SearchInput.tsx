@@ -4,9 +4,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
-import { InputStylesRaw } from '../../styles';
-import { InputType } from '../../types/state';
+import { useAppSelector } from '@/hooks/app';
+import { InputStylesRaw } from '@/styles';
+import { InputType } from '@/types/state';
 
 interface SearchInputProps {
   onFocus: () => unknown;

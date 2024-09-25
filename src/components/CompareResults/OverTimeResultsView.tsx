@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import { useLoaderData } from 'react-router-dom';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
-import { SearchContainerStyles, background } from '../../styles';
+import { useAppSelector } from '@/hooks/app';
+import { SearchContainerStyles, background } from '@/styles';
 import CompareOverTime from '../Search/CompareOverTime';
 import { LinkToHome } from '../Shared/LinkToHome';
 import PerfCompareHeader from '../Shared/PerfCompareHeader';

@@ -1,14 +1,14 @@
 import { Link } from '@mui/material';
 import { style } from 'typestyle';
 
-import { Strings } from '../../resources/Strings';
-import { Colors, Spacing } from '../../styles';
-import type { RevisionsHeader } from '../../types/state';
+import { Strings } from '@/resources/Strings';
+import { Colors, Spacing } from '@/styles';
+import type { RevisionsHeader } from '@/types/state';
 import {
   getTreeherderURL,
   truncateHash,
   getDocsURL,
-} from '../../utils/helpers';
+} from '@/utils/helpers';
 
 const styles = {
   revisionHeader: style({

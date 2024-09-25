@@ -3,11 +3,11 @@ import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import { style } from 'typestyle';
 
-import { useAppSelector, useAppDispatch } from '../../hooks/app';
-import { updateThemeMode } from '../../reducers/ThemeSlice';
-import { Strings } from '../../resources/Strings';
-import { Spacing, FontsRaw, SwitchRaw } from '../../styles';
-import { ThemeMode } from '../../types/state';
+import { useAppSelector, useAppDispatch } from '@/hooks/app';
+import { updateThemeMode } from '@/reducers/ThemeSlice';
+import { Strings } from '@/resources/Strings';
+import { Spacing, FontsRaw, SwitchRaw } from '@/styles';
+import { ThemeMode } from '@/types/state';
 
 const strings = Strings.components.header;
 const label = { inputProps: { 'aria-label': 'Dark mode switch' } };

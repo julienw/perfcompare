@@ -1,12 +1,12 @@
-import { repoMap, frameworks } from '../../common/constants';
-import { compareView } from '../../common/constants';
+import { repoMap, frameworks } from '@/common/constants';
+import { compareView } from '@/common/constants';
 import {
   fetchCompareResults,
   fetchFakeCompareResults,
   memoizedFetchRevisionForRepository,
-} from '../../logic/treeherder';
-import { Changeset, CompareResultsItem, Repository } from '../../types/state';
-import { FakeCommitHash, Framework } from '../../types/types';
+} from '@/logic/treeherder';
+import { Changeset, CompareResultsItem, Repository } from '@/types/state';
+import { FakeCommitHash, Framework } from '@/types/types';
 
 // This function checks and sanitizes the input values, then returns values that
 // we can then use in the rest of the application.

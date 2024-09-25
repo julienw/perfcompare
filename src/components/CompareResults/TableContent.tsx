@@ -2,11 +2,11 @@ import { useMemo, memo } from 'react';
 
 import { Virtuoso } from 'react-virtuoso';
 
-import type { compareView, compareOverTimeView } from '../../common/constants';
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import type { CompareResultsItem, RevisionsHeader } from '../../types/state';
-import type { CompareResultsTableConfig } from '../../types/types';
+import type { compareView, compareOverTimeView } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import type { CompareResultsItem, RevisionsHeader } from '@/types/state';
+import type { CompareResultsTableConfig } from '@/types/types';
 import NoResultsFound from './NoResultsFound';
 import TableRevisionContent from './TableRevisionContent';
 

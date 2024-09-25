@@ -1,11 +1,11 @@
 import {
   storeUserToken,
   storeUserCredentials,
-} from '../../logic/credentials-storage';
+} from '@/logic/credentials-storage';
 import {
   retrieveTaskclusterUserCredentials,
   retrieveTaskclusterToken,
-} from '../../logic/taskcluster';
+} from '@/logic/taskcluster';
 
 export async function loader({ request }: { request: Request }) {
   const url = new URL(request.url);

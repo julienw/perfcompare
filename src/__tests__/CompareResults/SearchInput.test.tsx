@@ -1,8 +1,8 @@
 import userEvent from '@testing-library/user-event';
 
-import { loader } from '../../components/CompareResults/loader';
-import ResultsView from '../../components/CompareResults/ResultsView';
-import { Strings } from '../../resources/Strings';
+import { loader } from '@/components/CompareResults/loader';
+import ResultsView from '@/components/CompareResults/ResultsView';
+import { Strings } from '@/resources/Strings';
 import getTestData from '../utils/fixtures';
 import {
   renderWithRouter,

@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 
-import { compareView } from '../../common/constants';
-import { loader } from '../../components/CompareResults/loader';
-import RevisionRow from '../../components/CompareResults/RevisionRow';
-import { Platform } from '../../types/types';
+import { compareView } from '@/common/constants';
+import { loader } from '@/components/CompareResults/loader';
+import RevisionRow from '@/components/CompareResults/RevisionRow';
+import { Platform } from '@/types/types';
 import getTestData from '../utils/fixtures';
 import {
   screen,

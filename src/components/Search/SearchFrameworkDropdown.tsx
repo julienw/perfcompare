@@ -7,10 +7,10 @@ import InputLabel from '@mui/material/InputLabel';
 import Tooltip from '@mui/material/Tooltip';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import { ButtonsLightRaw, ButtonsDarkRaw } from '../../styles';
-import type { Framework } from '../../types/types';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import { ButtonsLightRaw, ButtonsDarkRaw } from '@/styles';
+import type { Framework } from '@/types/types';
 import FrameworkDropdown from '../Shared/FrameworkDropdown';
 
 const strings = Strings.components.searchDefault.sharedCollasped.framework;

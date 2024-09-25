@@ -9,15 +9,15 @@ import {
   getTaskclusterParams,
   retrigger,
   signInIntoTaskcluster,
-} from '../../../logic/taskcluster';
+} from '@/logic/taskcluster';
 import {
   fetchDecisionTaskIdFromPushId,
   fetchJobInformationFromJobId,
-} from '../../../logic/treeherder';
-import { Strings } from '../../../resources/Strings';
-import { CompareResultsItem } from '../../../types/state';
-import { getTreeherderURL } from '../../../utils/helpers';
-import SnackbarCloseButton from '../../Shared/SnackbarCloseButton';
+} from '@/logic/treeherder';
+import { Strings } from '@/resources/Strings';
+import { CompareResultsItem } from '@/types/state';
+import { getTreeherderURL } from '@/utils/helpers';
+import SnackbarCloseButton from '@/components/Shared/SnackbarCloseButton';
 import { RetriggerConfigModal } from './RetriggerConfigModal';
 import { RetriggerSignInModal } from './RetriggerSignInModal';
 

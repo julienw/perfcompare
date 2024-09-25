@@ -1,13 +1,13 @@
-import { loader } from '../../components/TaskclusterAuth/loader';
-import TaskclusterCallback from '../../components/TaskclusterAuth/TaskclusterCallback';
-import { getLocationOrigin } from '../../utils/location';
+import { loader } from '@/components/TaskclusterAuth/loader';
+import TaskclusterCallback from '@/components/TaskclusterAuth/TaskclusterCallback';
+import { getLocationOrigin } from '@/utils/location';
 import {
   FetchMockSandbox,
   renderWithRouter,
   screen,
 } from '../utils/test-utils';
 
-jest.mock('../../utils/location');
+jest.mock('@/utils/location');
 const mockedGetLocationOrigin = getLocationOrigin as jest.Mock;
 
 describe('Taskcluster Callback', () => {

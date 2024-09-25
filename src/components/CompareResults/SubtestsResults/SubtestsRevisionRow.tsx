@@ -8,10 +8,10 @@ import TimelineIcon from '@mui/icons-material/Timeline';
 import { IconButton, Box } from '@mui/material';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../../hooks/app';
-import { Strings } from '../../../resources/Strings';
-import { Colors, Spacing, ExpandableRowStyles } from '../../../styles';
-import type { CompareResultsItem } from '../../../types/state';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import { Colors, Spacing, ExpandableRowStyles } from '@/styles';
+import type { CompareResultsItem } from '@/types/state';
 import RevisionRowExpandable from '.././RevisionRowExpandable';
 
 const revisionsRow = {

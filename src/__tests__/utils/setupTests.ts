@@ -16,8 +16,8 @@ import fetchMock from 'fetch-mock-jest';
 import { Bubble, Line } from 'react-chartjs-2';
 import { Hooks } from 'taskcluster-client-web';
 
-import { createStore } from '../../common/store';
-import type { Store } from '../../common/store';
+import { createStore } from '@/common/store';
+import type { Store } from '@/common/store';
 
 // Register TextDecoder and TextEncoder with the global scope.
 // These are now available globally in nodejs, but not when running with jsdom

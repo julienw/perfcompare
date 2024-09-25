@@ -3,11 +3,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { style } from 'typestyle';
 
-import { timeRangeMap } from '../../common/constants';
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import { ButtonsLightRaw, ButtonsDarkRaw, DropDownItems } from '../../styles';
-import type { TimeRange } from '../../types/types';
+import { timeRangeMap } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import { ButtonsLightRaw, ButtonsDarkRaw, DropDownItems } from '@/styles';
+import type { TimeRange } from '@/types/types';
 
 const strings = Strings.components.searchDefault.overTime.collapsed.timeRange;
 

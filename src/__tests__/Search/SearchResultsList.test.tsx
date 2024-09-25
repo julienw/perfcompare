@@ -1,8 +1,8 @@
 import userEvent from '@testing-library/user-event';
 
-import { loader } from '../../components/Search/loader';
-import SearchView from '../../components/Search/SearchView';
-import { Strings } from '../../resources/Strings';
+import { loader } from '@/components/Search/loader';
+import SearchView from '@/components/Search/SearchView';
+import { Strings } from '@/resources/Strings';
 import getTestData from '../utils/fixtures';
 import {
   screen,

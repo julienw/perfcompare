@@ -2,11 +2,11 @@ import { ReactElement } from 'react';
 
 import userEvent from '@testing-library/user-event';
 
-import { loader as withBaseLoader } from '../../components/CompareResults/loader';
-import ResultsView from '../../components/CompareResults/ResultsView';
-import { loader as searchLoader } from '../../components/Search/loader';
-import SearchView from '../../components/Search/SearchView';
-import { Strings } from '../../resources/Strings';
+import { loader as withBaseLoader } from '@/components/CompareResults/loader';
+import ResultsView from '@/components/CompareResults/ResultsView';
+import { loader as searchLoader } from '@/components/Search/loader';
+import SearchView from '@/components/Search/SearchView';
+import { Strings } from '@/resources/Strings';
 import getTestData from '../utils/fixtures';
 import {
   screen,

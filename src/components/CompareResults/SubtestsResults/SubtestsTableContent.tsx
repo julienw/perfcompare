@@ -1,7 +1,7 @@
 import { style } from 'typestyle';
 
-import { Spacing } from '../../../styles';
-import type { CompareResultsItem } from '../../../types/state';
+import { Spacing } from '@/styles';
+import type { CompareResultsItem } from '@/types/state';
 import SubtestsRevisionRow from './SubtestsRevisionRow';
 
 const styles = {

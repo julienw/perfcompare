@@ -2,10 +2,10 @@ import type { ReactElement } from 'react';
 
 import userEvent, { type UserEvent } from '@testing-library/user-event';
 
-import { loader } from '../../components/CompareResults/loader';
-import ResultsView from '../../components/CompareResults/ResultsView';
-import { Strings } from '../../resources/Strings';
-import type { CompareResultsItem } from '../../types/state';
+import { loader } from '@/components/CompareResults/loader';
+import ResultsView from '@/components/CompareResults/ResultsView';
+import { Strings } from '@/resources/Strings';
+import type { CompareResultsItem } from '@/types/state';
 import getTestData from '../utils/fixtures';
 import {
   renderWithRouter,

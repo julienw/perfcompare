@@ -1,10 +1,10 @@
 import Divider from '@mui/material/Divider';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import { Colors, Spacing } from '../../styles';
-import type { CompareResultsItem } from '../../types/state';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import { Colors, Spacing } from '@/styles';
+import type { CompareResultsItem } from '@/types/state';
 import Distribution from './Distribution';
 
 const strings = Strings.components.expandableRow;

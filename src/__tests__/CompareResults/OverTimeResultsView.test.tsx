@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react';
 
-import { loader } from '../../components/CompareResults/overTimeLoader';
-import OverTimeResultsView from '../../components/CompareResults/OverTimeResultsView';
-import { Strings } from '../../resources/Strings';
+import { loader } from '@/components/CompareResults/overTimeLoader';
+import OverTimeResultsView from '@/components/CompareResults/OverTimeResultsView';
+import { Strings } from '@/resources/Strings';
 import getTestData from '../utils/fixtures';
 import {
   renderWithRouter,
@@ -29,7 +29,7 @@ function renderWithRoute(component: ReactElement) {
   });
 }
 
-jest.mock('../../utils/location');
+jest.mock('@/utils/location');
 // const mockedGetLocationOrigin = getLocationOrigin as jest.Mock;
 
 describe('Results View', () => {

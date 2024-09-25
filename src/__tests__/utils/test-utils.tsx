@@ -11,8 +11,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import type { LoaderFunction } from 'react-router-dom';
 import { VirtuosoMockContext } from 'react-virtuoso';
 
-import SnackbarCloseButton from '../../components/Shared/SnackbarCloseButton';
-import getProtocolTheme from '../../theme/protocolTheme';
+import SnackbarCloseButton from '@/components/Shared/SnackbarCloseButton';
+import getProtocolTheme from '@/theme/protocolTheme';
 import { store } from './setupTests';
 
 type ChildrenProps = { children: React.ReactElement };

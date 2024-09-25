@@ -1,7 +1,7 @@
-import { repoMap, frameworks } from '../../common/constants';
-import { memoizedFetchRevisionForRepository } from '../../logic/treeherder';
-import { Changeset, Repository } from '../../types/state';
-import { Framework } from '../../types/types';
+import { repoMap, frameworks } from '@/common/constants';
+import { memoizedFetchRevisionForRepository } from '@/logic/treeherder';
+import { Changeset, Repository } from '@/types/state';
+import { Framework } from '@/types/types';
 
 const DEFAULT_VALUES = {
   newRev: null,

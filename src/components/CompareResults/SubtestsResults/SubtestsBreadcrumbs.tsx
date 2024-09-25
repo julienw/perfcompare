@@ -2,7 +2,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 
-import { subtestsView, subtestsOverTimeView } from '../../../common/constants';
+import { subtestsView, subtestsOverTimeView } from '@/common/constants';
 
 type SubtestsBreadcrumbsProps = {
   view: typeof subtestsView | typeof subtestsOverTimeView;

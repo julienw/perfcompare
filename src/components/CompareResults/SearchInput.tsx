@@ -4,8 +4,8 @@ import Close from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment, TextField, Box, IconButton } from '@mui/material';
 
-import { Strings } from '../../resources/Strings';
-import { simpleDebounce } from '../../utils/simple-debounce';
+import { Strings } from '@/resources/Strings';
+import { simpleDebounce } from '@/utils/simple-debounce';
 
 interface SearchInputProps {
   defaultValue?: string;

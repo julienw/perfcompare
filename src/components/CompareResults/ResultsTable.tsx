@@ -5,11 +5,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { useSearchParams } from 'react-router-dom';
 import { useLoaderData, Await } from 'react-router-dom';
 
-import useRawSearchParams from '../../hooks/useRawSearchParams';
-import type { CompareResultsItem } from '../../types/state';
-import { Framework } from '../../types/types';
-import type { CompareResultsTableConfig } from '../../types/types';
-import { getPlatformShortName } from '../../utils/platform';
+import useRawSearchParams from '@/hooks/useRawSearchParams';
+import type { CompareResultsItem } from '@/types/state';
+import { Framework } from '@/types/types';
+import type { CompareResultsTableConfig } from '@/types/types';
+import { getPlatformShortName } from '@/utils/platform';
 import type { LoaderReturnValue } from './loader';
 import type { LoaderReturnValue as OverTimeLoaderReturnValue } from './overTimeLoader';
 import ResultsControls from './ResultsControls';

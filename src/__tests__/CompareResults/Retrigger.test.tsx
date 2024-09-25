@@ -1,10 +1,10 @@
 import userEvent from '@testing-library/user-event';
 import { Hooks } from 'taskcluster-client-web';
 
-import RetriggerButton from '../../components/CompareResults/Retrigger/RetriggerButton';
-import { loader } from '../../components/CompareResults/subtestsLoader';
-import SubtestsResultsMain from '../../components/CompareResults/SubtestsResults/SubtestsResultsMain';
-import { getLocationOrigin } from '../../utils/location';
+import RetriggerButton from '@/components/CompareResults/Retrigger/RetriggerButton';
+import { loader } from '@/components/CompareResults/subtestsLoader';
+import SubtestsResultsMain from '@/components/CompareResults/SubtestsResults/SubtestsResultsMain';
+import { getLocationOrigin } from '@/utils/location';
 import getTestData from '../utils/fixtures';
 import {
   FetchMockSandbox,
@@ -15,7 +15,7 @@ import {
   within,
 } from '../utils/test-utils';
 
-jest.mock('../../utils/location');
+jest.mock('@/utils/location');
 const mockedGetLocationOrigin = getLocationOrigin as jest.Mock;
 const result = getTestData().testCompareData[0];
 

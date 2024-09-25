@@ -1,4 +1,4 @@
-import type { CompareResultsItem, Changeset } from '../../types/state';
+import type { CompareResultsItem, Changeset } from '@/types/state';
 
 const getTestData = () => {
   const testData: Changeset[] = [

@@ -2,8 +2,8 @@ import { useMemo, useState } from 'react';
 
 import Box from '@mui/material/Box';
 
-import type { CompareResultsItem } from '../../../types/state';
-import type { CompareResultsTableConfig } from '../../../types/types';
+import type { CompareResultsItem } from '@/types/state';
+import type { CompareResultsTableConfig } from '@/types/types';
 import NoResultsFound from '.././NoResultsFound';
 import TableHeader from '.././TableHeader';
 import SubtestsTableContent from './SubtestsTableContent';

@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import { Await, useLoaderData } from 'react-router-dom';
 import { style } from 'typestyle';
 
-import { Strings } from '../../resources/Strings';
-import { Spacing } from '../../styles/Spacing';
+import { Strings } from '@/resources/Strings';
+import { Spacing } from '@/styles/Spacing';
 import type { LoaderReturnValue } from '../CompareResults/loader';
 import type { LoaderReturnValue as OverTimeLoaderReturnValue } from '../CompareResults/overTimeLoader';
 

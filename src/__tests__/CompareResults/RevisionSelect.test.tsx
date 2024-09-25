@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react';
 
-import { loader } from '../../components/CompareResults/loader';
-import ResultsView from '../../components/CompareResults/ResultsView';
-import RevisionSelect from '../../components/CompareResults/RevisionSelect';
-import { Strings } from '../../resources/Strings';
+import { loader } from '@/components/CompareResults/loader';
+import ResultsView from '@/components/CompareResults/ResultsView';
+import RevisionSelect from '@/components/CompareResults/RevisionSelect';
+import { Strings } from '@/resources/Strings';
 import {
   fireEvent,
   renderWithRouter,

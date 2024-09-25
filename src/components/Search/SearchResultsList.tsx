@@ -2,15 +2,15 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import { style } from 'typestyle';
 
-import { useAppSelector } from '../../hooks/app';
+import { useAppSelector } from '@/hooks/app';
 import {
   Colors,
   FontsRaw,
   Spacing,
   captionStylesLight,
   captionStylesDark,
-} from '../../styles';
-import { Changeset } from '../../types/state';
+} from '@/styles';
+import { Changeset } from '@/types/state';
 import SearchResultsListItem from './SearchResultsListItem';
 
 interface SearchResultsListProps {

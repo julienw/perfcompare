@@ -3,11 +3,11 @@ import { ReactElement } from 'react';
 import userEvent from '@testing-library/user-event';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { loader as overTimeLoader } from '../../components/CompareResults/overTimeLoader';
-import OverTimeResultsView from '../../components/CompareResults/OverTimeResultsView';
-import { loader as searchLoader } from '../../components/Search/loader';
-import SearchView from '../../components/Search/SearchView';
-import { Strings } from '../../resources/Strings';
+import { loader as overTimeLoader } from '@/components/CompareResults/overTimeLoader';
+import OverTimeResultsView from '@/components/CompareResults/OverTimeResultsView';
+import { loader as searchLoader } from '@/components/Search/loader';
+import SearchView from '@/components/Search/SearchView';
+import { Strings } from '@/resources/Strings';
 import getTestData from '../utils/fixtures';
 import {
   screen,

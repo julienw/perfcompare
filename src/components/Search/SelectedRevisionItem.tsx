@@ -13,16 +13,16 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
 
-import { repoMap } from '../../common/constants';
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import { SelectRevsStyles } from '../../styles';
-import { Changeset } from '../../types/state';
+import { repoMap } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import { SelectRevsStyles } from '@/styles';
+import { Changeset } from '@/types/state';
 import {
   truncateHash,
   getLatestCommitMessage,
   getTreeherderURL,
-} from '../../utils/helpers';
+} from '@/utils/helpers';
 
 const base = Strings.components.searchDefault.base;
 const warning = base.collapsed.warnings.comparison;

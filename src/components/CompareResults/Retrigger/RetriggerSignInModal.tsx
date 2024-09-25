@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import { Box, Typography, Button } from '@mui/material';
 
-import TaskclusterLogo from '../../../assets/taskcluster-logo.png';
-import { Strings } from '../../../resources/Strings';
+import TaskclusterLogo from '@/assets/taskcluster-logo.png';
+import { Strings } from '@/resources/Strings';
 import { CenteredModal } from './CenteredModal';
 
 const signinStrings = Strings.components.retrigger.signin;

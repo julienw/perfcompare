@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import { style } from 'typestyle';
 
-import { subtestsView } from '../../../common/constants';
-import { useAppSelector } from '../../../hooks/app';
-import { background } from '../../../styles';
-import PerfCompareHeader from '../../Shared/PerfCompareHeader';
+import { subtestsView } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { background } from '@/styles';
+import PerfCompareHeader from '@/components/Shared/PerfCompareHeader';
 import SubtestsResultsMain from './SubtestsResultsMain';
 
 interface ResultsViewProps {

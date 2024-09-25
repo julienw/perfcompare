@@ -10,12 +10,12 @@ import { IconButton, Box } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 import { style } from 'typestyle';
 
-import { compareView, compareOverTimeView } from '../../common/constants';
-import { useAppSelector } from '../../hooks/app';
-import { Strings } from '../../resources/Strings';
-import { Colors, Spacing, ExpandableRowStyles } from '../../styles';
-import type { CompareResultsItem, PlatformShortName } from '../../types/state';
-import { getPlatformShortName } from '../../utils/platform';
+import { compareView, compareOverTimeView } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import { Strings } from '@/resources/Strings';
+import { Colors, Spacing, ExpandableRowStyles } from '@/styles';
+import type { CompareResultsItem, PlatformShortName } from '@/types/state';
+import { getPlatformShortName } from '@/utils/platform';
 import AndroidIcon from '../Shared/Icons/AndroidIcon';
 import LinuxIcon from '../Shared/Icons/LinuxIcon';
 import SubtestsIcon from '../Shared/Icons/SubtestsIcon';

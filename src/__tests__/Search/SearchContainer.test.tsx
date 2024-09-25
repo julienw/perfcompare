@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { loader } from '../../components/Search/loader';
-import SearchContainer from '../../components/Search/SearchContainer';
+import { loader } from '@/components/Search/loader';
+import SearchContainer from '@/components/Search/SearchContainer';
 import getTestData from '../utils/fixtures';
 import {
   renderWithRouter,

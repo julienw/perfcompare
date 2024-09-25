@@ -5,11 +5,11 @@ import { Container } from '@mui/system';
 import { useLoaderData } from 'react-router-dom';
 import { style } from 'typestyle';
 
-import { subtestsView, subtestsOverTimeView } from '../../../common/constants';
-import { useAppSelector } from '../../../hooks/app';
-import useRawSearchParams from '../../../hooks/useRawSearchParams';
-import { Colors, Spacing } from '../../../styles';
-import type { SubtestsRevisionsHeader } from '../../../types/state';
+import { subtestsView, subtestsOverTimeView } from '@/common/constants';
+import { useAppSelector } from '@/hooks/app';
+import useRawSearchParams from '@/hooks/useRawSearchParams';
+import { Colors, Spacing } from '@/styles';
+import type { SubtestsRevisionsHeader } from '@/types/state';
 import DownloadButton from '.././DownloadButton';
 import SearchInput from '.././SearchInput';
 import RetriggerButton from '../Retrigger/RetriggerButton';
