@@ -13,6 +13,10 @@ const config: Config.InitialOptions = {
       '@swc/jest',
       {
         jsc: {
+          baseUrl: __dirname,
+          paths: {
+            '@/*': ['./src/*'],
+          },
           transform: {
             react: {
               runtime: 'automatic',
@@ -33,6 +37,7 @@ const config: Config.InitialOptions = {
   ],
   modulePaths: [],
   moduleNameMapper: {
+    '^@/': '<rootDir>/src/',
     '^react-native$': 'react-native-web',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '\\.(css)$': 'identity-obj-proxy',

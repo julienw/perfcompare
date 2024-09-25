@@ -17,6 +17,9 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+      alias: {
+        map: [['@', './src']],
+      },
     },
     react: {
       version: 'detect',
