@@ -11,9 +11,7 @@ ChartJS.register(LinearScale, LineElement);
 
 const styles = {
   container: style({
-    display: 'flex',
     marginBottom: Spacing.Medium,
-    width: '390px',
   }),
 };
 
