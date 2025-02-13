@@ -2,18 +2,10 @@ import { Chart as ChartJS, LineElement, LinearScale } from 'chart.js';
 import 'chart.js/auto';
 import * as kde from 'fast-kde';
 import { Line } from 'react-chartjs-2';
-import { style } from 'typestyle';
 
-import { Spacing } from '../../styles';
 import { MeasurementUnit } from '../../types/types';
 
 ChartJS.register(LinearScale, LineElement);
-
-const styles = {
-  container: style({
-    marginBottom: Spacing.Medium,
-  }),
-};
 
 function CommonGraph({
   baseRevisionRuns,
@@ -27,7 +19,7 @@ function CommonGraph({
   const options = {
     plugins: {
       legend: {
-        align: 'start' as const,
+        //        align: 'start' as const,
         position: 'bottom' as const,
       },
       title: {
@@ -37,7 +29,7 @@ function CommonGraph({
       },
     },
     responsive: true,
-    aspectRatio: 1.7,
+    maintainAspectRatio: false,
     scales: {
       x: {
         grid: {
@@ -128,12 +120,8 @@ function CommonGraph({
     ],
   };
 
-  return (
-    <div className={styles.container}>
-      {/* @ts-expect-error the types for chart.js do not seem great and do not support all options. */}
-      <Line options={options} data={data} />
-    </div>
-  );
+  /* @ts-expect-error the types for chart.js do not seem great and do not support all options. */
+  return <Line options={options} data={data} />;
 }
 
 interface CommonGraphProps {

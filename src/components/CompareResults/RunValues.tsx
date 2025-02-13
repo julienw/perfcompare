@@ -48,7 +48,7 @@ function RunValues(props: RunValuesProps) {
   };
 
   return (
-    <div>
+    <>
       {application ? (
         <div>
           <b>{name}:</b> {formatNumber(avg)} {measurementUnit} ({application})
@@ -92,7 +92,7 @@ function RunValues(props: RunValuesProps) {
           {stddev} {unit} = {stddevPercent}% standard deviation
         </div>
       </div>
-    </div>
+    </>
   );
 }
 interface RunValuesProps {
